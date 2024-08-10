@@ -16,7 +16,7 @@
 
 services:
   mysql:
-    image: registry.cn-beijing.aliyuncs.com/dc3/dc3-mysql:2024.3.0.dev
+    image: 192.168.100.99:5000/fengpin/mysql:8.0.20
     restart: always
     ports:
       - '33306:3306'
@@ -100,11 +100,41 @@ services:
 
 volumes:
   mysql_data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/mysql/date/'
   mysql_lib:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/mysql/lib/'
   mongo_data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/mongo/data/'
   mongo_config:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/mongo/config/'
   redis:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/redis/'
   rabbitmq:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/data/rabbitmq/'
 
 networks:
   dc3net:
