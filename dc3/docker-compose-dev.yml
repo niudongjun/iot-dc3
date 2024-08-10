@@ -16,7 +16,7 @@
 
 services:
   mysql:
-    image: registry.cn-beijing.aliyuncs.com/dc3/dc3-mysql:2024.3.2.dev
+    image: registry.cn-beijing.aliyuncs.com/dc3/dc3-mysql:2024.3.0.dev
     restart: always
     ports:
       - '33306:3306'
