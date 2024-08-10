@@ -25,6 +25,10 @@ services:
       - '8000:8000'
     environment:
       - NODE_ENV=dev
+      - REDIS_HOST=192.168.10.120
+      - REDIS_PORT=36379
+      - REDIS_PASSWORD=dc3
+      - CACHE_REDIS_TIME_TO_LIVE=5s
     container_name: dc3-gateway
     hostname: dc3-gateway
     volumes:
@@ -50,6 +54,15 @@ services:
       - '9300:9300'
     environment:
       - NODE_ENV=dev
+      - MYSQL_HOST=192.168.10.120
+      - MYSQL_PORT=33306
+      - MYSQL_DB=dc3_auth
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=dc3
+      - REDIS_HOST=192.168.10.120
+      - REDIS_PORT=36379
+      - REDIS_PASSWORD=dc3
+      - CACHE_REDIS_TIME_TO_LIVE=5s
     container_name: dc3-center-auth
     hostname: dc3-center-auth
     volumes:
@@ -76,6 +89,25 @@ services:
       - '9400:9400'
     environment:
       - NODE_ENV=dev
+      - MYSQL_HOST=192.168.10.120
+      - MYSQL_PORT=33306
+      - MYSQL_DB=dc3_auth
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=dc3
+      - REDIS_HOST=192.168.10.120
+      - REDIS_PORT=36379
+      - REDIS_PASSWORD=dc3
+      - CACHE_REDIS_TIME_TO_LIVE=5s
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
+      - MONGO_HOST=192.168.10.120
+      - MONGO_PORT=37017
+      - MONGO_DATABASE=dc3
+      - MONGO_USERNAME=dc3
+      - MONGO_PASSWORD=dc3
     container_name: dc3-center-manager
     hostname: dc3-center-manager
     volumes:
@@ -102,6 +134,25 @@ services:
       - '9500:9500'
     environment:
       - NODE_ENV=dev
+      - MYSQL_HOST=192.168.10.120
+      - MYSQL_PORT=33306
+      - MYSQL_DB=dc3_auth
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=dc3
+      - REDIS_HOST=192.168.10.120
+      - REDIS_PORT=36379
+      - REDIS_PASSWORD=dc3
+      - CACHE_REDIS_TIME_TO_LIVE=5s
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
+      - MONGO_HOST=192.168.10.120
+      - MONGO_PORT=37017
+      - MONGO_DATABASE=dc3
+      - MONGO_USERNAME=dc3
+      - MONGO_PASSWORD=dc3
     container_name: dc3-center-data
     hostname: dc3-center-data
     volumes:
@@ -124,6 +175,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-virtual
     hostname: dc3-driver-virtual
     volumes:
@@ -146,6 +202,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-plcs7
     hostname: dc3-driver-plcs7
     volumes:
@@ -168,6 +229,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-opc-da
     hostname: dc3-driver-opc-da
     volumes:
@@ -190,6 +256,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-opc-ua
     hostname: dc3-driver-opc-ua
     volumes:
@@ -215,6 +286,11 @@ services:
       - '6271:6271'
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-listening-virtual
     hostname: dc3-driver-listening-virtual
     volumes:
@@ -240,6 +316,11 @@ services:
       - '9002:9002'
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-dtu-yeecom
     hostname: dc3-driver-dtu-yeecom
     volumes:
@@ -265,6 +346,11 @@ services:
       - '5684:5684'
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-lwm2m
     hostname: dc3-driver-lwm2m
     volumes:
@@ -287,6 +373,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-mqtt
     hostname: dc3-driver-mqtt
     volumes:
@@ -309,6 +400,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-edge-gateway
     hostname: dc3-driver-edge-gateway
     volumes:
@@ -331,6 +427,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-modbus-tcp
     hostname: dc3-driver-modbus-tcp
     volumes:
@@ -353,6 +454,11 @@ services:
     restart: always
     environment:
       - NODE_ENV=dev
+      - RABBITMQ_VIRTUAL_HOST=dc3
+      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=dc3
+      - RABBITMQ_PASSWORD=dc3
     container_name: dc3-driver-weather-amap
     hostname: dc3-driver-weather-amap
     volumes:
@@ -369,6 +475,11 @@ services:
 
 volumes:
   logs:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: '/usr/local/logs/'
 
 networks:
   dc3net:
