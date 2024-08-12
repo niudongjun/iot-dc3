@@ -25,7 +25,7 @@ services:
       - '8000:8000'
     environment:
       - NODE_ENV=dev
-      - REDIS_HOST=192.168.10.120
+      - REDIS_HOST=192.168.8.251
       - REDIS_PORT=36379
       - REDIS_PASSWORD=dc3
       - CACHE_REDIS_TIME_TO_LIVE=5s
@@ -54,12 +54,12 @@ services:
       - '9300:9300'
     environment:
       - NODE_ENV=dev
-      - MYSQL_HOST=192.168.10.120
+      - MYSQL_HOST=192.168.8.251
       - MYSQL_PORT=33306
       - MYSQL_DB=dc3_auth
       - MYSQL_USERNAME=root
       - MYSQL_PASSWORD=dc3
-      - REDIS_HOST=192.168.10.120
+      - REDIS_HOST=192.168.8.251
       - REDIS_PORT=36379
       - REDIS_PASSWORD=dc3
       - CACHE_REDIS_TIME_TO_LIVE=5s
@@ -89,21 +89,21 @@ services:
       - '9400:9400'
     environment:
       - NODE_ENV=dev
-      - MYSQL_HOST=192.168.10.120
+      - MYSQL_HOST=192.168.8.251
       - MYSQL_PORT=33306
       - MYSQL_DB=dc3_auth
       - MYSQL_USERNAME=root
       - MYSQL_PASSWORD=dc3
-      - REDIS_HOST=192.168.10.120
+      - REDIS_HOST=192.168.8.251
       - REDIS_PORT=36379
       - REDIS_PASSWORD=dc3
       - CACHE_REDIS_TIME_TO_LIVE=5s
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
-      - MONGO_HOST=192.168.10.120
+      - MONGO_HOST=192.168.8.251
       - MONGO_PORT=37017
       - MONGO_DATABASE=dc3
       - MONGO_USERNAME=dc3
@@ -134,21 +134,21 @@ services:
       - '9500:9500'
     environment:
       - NODE_ENV=dev
-      - MYSQL_HOST=192.168.10.120
+      - MYSQL_HOST=192.168.8.251
       - MYSQL_PORT=33306
       - MYSQL_DB=dc3_auth
       - MYSQL_USERNAME=root
       - MYSQL_PASSWORD=dc3
-      - REDIS_HOST=192.168.10.120
+      - REDIS_HOST=192.168.8.251
       - REDIS_PORT=36379
       - REDIS_PASSWORD=dc3
       - CACHE_REDIS_TIME_TO_LIVE=5s
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
-      - MONGO_HOST=192.168.10.120
+      - MONGO_HOST=192.168.8.251
       - MONGO_PORT=37017
       - MONGO_DATABASE=dc3
       - MONGO_USERNAME=dc3
@@ -176,7 +176,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -203,7 +203,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -230,7 +230,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -257,7 +257,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -287,7 +287,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -317,7 +317,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -347,7 +347,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -374,7 +374,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -401,7 +401,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -428,7 +428,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
@@ -455,7 +455,7 @@ services:
     environment:
       - NODE_ENV=dev
       - RABBITMQ_VIRTUAL_HOST=dc3
-      - RABBITMQ_HOST=192.168.10.120
+      - RABBITMQ_HOST=192.168.8.251
       - RABBITMQ_PORT=5672
       - RABBITMQ_USERNAME=dc3
       - RABBITMQ_PASSWORD=dc3
