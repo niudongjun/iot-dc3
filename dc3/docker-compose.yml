@@ -91,7 +91,7 @@ services:
       - NODE_ENV=dev
       - MYSQL_HOST=192.168.8.251
       - MYSQL_PORT=33306
-      - MYSQL_DB=dc3_auth
+      - MYSQL_DB=dc3_manager
       - MYSQL_USERNAME=root
       - MYSQL_PASSWORD=dc3
       - REDIS_HOST=192.168.8.251
@@ -136,7 +136,7 @@ services:
       - NODE_ENV=dev
       - MYSQL_HOST=192.168.8.251
       - MYSQL_PORT=33306
-      - MYSQL_DB=dc3_auth
+      - MYSQL_DB=dc3_data
       - MYSQL_USERNAME=root
       - MYSQL_PASSWORD=dc3
       - REDIS_HOST=192.168.8.251
